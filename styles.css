@@ -1,0 +1,181 @@
+/* =======================
+   RESET GENERAL
+======================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =======================
+   BODY
+======================= */
+body {
+    min-height: 100vh;
+    font-family: 'Georgia', serif;
+    background: radial-gradient(circle at top, #2a0a33, #000014);
+    color: white;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* =======================
+   HEADER
+======================= */
+header {
+    background: rgba(60, 30, 59, 0.9);
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+    margin-bottom: 20px;
+}
+
+#titulo {
+    font-size: clamp(2rem, 5vw, 2.6rem);
+    color: #f4a300;
+    letter-spacing: 2px;
+}
+
+/* =======================
+   ÁRBOL 3D (JS)
+======================= */
+.scene {
+  display: grid;
+  place-items: center;
+  height: 450px;
+  perspective: 900px;
+}
+
+.tree {
+  position: relative;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  animation: rotar 16s linear infinite;
+}
+
+.star {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white;
+  animation: brillar 2.5s infinite alternate;
+}
+
+.star.top {
+  width: 10px;
+  height: 10px;
+  background: gold;
+  box-shadow: 0 0 20px gold;
+}
+
+@keyframes rotar {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+@keyframes brillar {
+  from { opacity: .3; }
+  to   { opacity: 1; }
+}
+
+/* ROTACIÓN */
+@keyframes rotar {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+/* ROTACIÓN */
+@keyframes roty {
+    from { transform: rotateY(0deg); }
+    to   { transform: rotateY(360deg); }
+}
+
+/* =======================
+   INTRO
+======================= */
+.intro {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+    background: rgba(0,0,0,.4);
+    padding: 25px;
+    border-radius: 14px;
+    line-height: 1.7;
+}
+
+/* =======================
+   SECCIÓN / POSTS
+======================= */
+section {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.post {
+    background: rgba(0,0,0,.55);
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 35px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
+.post h2,
+.post h3 {
+    color: #f4a300;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.post p {
+    line-height: 1.7;
+}
+
+.post img {
+    max-width: 100%;
+    margin-top: 15px;
+    border-radius: 12px;
+}
+
+/* =======================
+   BOTÓN
+======================= */
+button {
+    margin-top: 15px;
+    background: linear-gradient(135deg, #f4a300, #ffbf3f);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform .2s ease, box-shadow .2s ease;
+    box-shadow: 0 8px 20px rgba(244,163,0,.4);
+}
+
+button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(244,163,0,.6);
+}
+
+/* =======================
+   IMAGEN SORPRESA
+======================= */
+#sorpresa {
+    display: none;
+    margin-top: 20px;
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+    margin-top: 50px;
+    background: rgba(60,30,59,.9);
+    padding: 25px;
+    text-align: center;
+    border-radius: 14px;
+}
